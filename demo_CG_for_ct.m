@@ -78,7 +78,7 @@ ssim_x_cg   = ssim(x_cg./nor, x./nor);
 %% DISPLAY
 wndImg  = [0, 0.03];
 
-figure(10); 
+figure('name', 'Conjugate Gradient (CG) Method');
 colormap(gray(256));
 
 suptitle('Conjugate Gradient (CG) Method');
