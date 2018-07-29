@@ -21,7 +21,7 @@ VIEW    = 360;
 THETA   = linspace(0, 180, VIEW + 1);   THETA(end) = [];
 
 R       = @(x) radon(x, THETA);
-RT      = @(y) iradon(y, THETA, 'none', N);
+RT      = @(y) iradon(y, THETA, 'none', N)/(pi/(2*length(THETA)));
 RINV    = @(y) iradon(y, THETA, N);
 
 %% DATA GENERATION
@@ -41,13 +41,13 @@ y       = pn;
 x_low   = RINV(y);
 
 %% CONJUGATE GRADIENT METHOD (CG) INITIALIZATION
-LAMBDA  = 3e0;
+LAMBDA  = 1e2;
 A       = @(x) (RT(R(x))  + LAMBDA*(Dxt(Dx(x)) + Dyt(Dy(x))));
 
 b0      = RT(y);
 x0      = zeros(N);
 
-niter   = 3e1;
+niter   = 2e1;
 
 L2              = @(x) power(norm(x, 'fro'), 2);
 COST.equation   = '1/2 * || A(X) - Y ||_2^2 + lambda/2 * ( || D_x(X) ||_2^2 + || D_y(X) ||_2^2 )';
