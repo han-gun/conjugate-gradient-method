@@ -1,8 +1,11 @@
 # conjugate-gradient-method
 
 ## Reference 
-Conjugate Gradient Method
+Conjugate Gradient Method `(ENG)`
 - https://en.wikipedia.org/wiki/Conjugate_gradient_method#Example_code_in_MATLAB_/_GNU_Octave
+
+켤레기울기법 `(KOR)`
+- https://ko.wikipedia.org/wiki/%EC%BC%A4%EB%A0%88%EA%B8%B0%EC%9A%B8%EA%B8%B0%EB%B2%95
 
 ## Conjugate Gradient Method (CG)
 The conjugate gradient method is an algorithm for the numerical solution of particular systems of linear equations, namely those whose matrix is [symmetric](https://en.wikipedia.org/wiki/Symmetric_matrix) and [positive-definite](https://en.wikipedia.org/wiki/Positive-definite_matrix). The conjugate gradient method is often implemented as an [iterative algorithm](https://en.wikipedia.org/wiki/Iterative_method), applicable to sparse systems that are too large to be handled by a direct implementation or other direct methods such as the Cholesky decomposition. 
