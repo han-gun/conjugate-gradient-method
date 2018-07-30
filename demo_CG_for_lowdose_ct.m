@@ -41,7 +41,7 @@ y       = pn;
 x_low   = RINV(y);
 
 %% CONJUGATE GRADIENT METHOD (CG) INITIALIZATION
-LAMBDA  = 1e2;
+LAMBDA  = 5e2;
 A       = @(x) (RT(R(x))  + LAMBDA*(Dxt(Dx(x)) + Dyt(Dy(x))));
 
 b0      = RT(y);
